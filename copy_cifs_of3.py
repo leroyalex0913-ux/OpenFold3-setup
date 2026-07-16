@@ -14,8 +14,8 @@ For each protein-pair directory under a root directory, this script:
 Works for any number of protein-pair directories and seed directories.
 
 Usage:
-    python copy_best_cifs.py /path/to/root_dir /path/to/output_dir
-    python copy_best_cifs.py /path/to/root_dir /path/to/output_dir --dry-run
+    python copy_cifs_of3.py /path/to/root_dir /path/to/output_dir
+    python copy_cifs_of3.py /path/to/root_dir /path/to/output_dir --dry-run
 """
 
 import argparse
@@ -115,8 +115,6 @@ def main():
         print(f"Processing: {pair_dir.name}")
         process_protein_pair_dir(pair_dir, output_dir, dry_run=args.dry_run)
         print()
-
-    print("Done.")
 
 
 if __name__ == "__main__":
