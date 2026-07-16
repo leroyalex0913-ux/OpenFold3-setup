@@ -16,8 +16,8 @@ directories, and any number of files per sample (as long as they share
 the same filename prefix as the aggregated-confidences file).
 
 Usage:
-    python copy_best_samples.py /path/to/root_dir
-    python copy_best_samples.py /path/to/root_dir --dry-run
+    python copy_best_rs_of3.py /path/to/root_dir
+    python copy_best_rs_of3.py /path/to/root_dir --dry-run
 """
 
 import argparse
@@ -115,8 +115,6 @@ def main():
         print(f"Processing: {pair_dir.name}")
         process_protein_pair_dir(pair_dir, dry_run=args.dry_run)
         print()
-
-    print("Done.")
 
 
 if __name__ == "__main__":
